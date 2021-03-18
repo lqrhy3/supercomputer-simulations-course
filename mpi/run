@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH -e smikhaylevskiy-%j.err
+#SBATCH -o smikhaylevskiy-%j.out
+#SBATCH --ntasks=4
+#SBATCH --time=0:01:00
+#SBATCH --job-name="smikhaylevskiy №6"
+module load OpenBlas
+mpirun -np $1 /home/smikhaylevskiy/hw/main /nfs_scratch/intro_sc/task6c/chol_input_1024.txt
